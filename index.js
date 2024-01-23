@@ -13,13 +13,9 @@ var carts = []
 
 const app = express();
 const port = 4000;
-const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with the actual URL of your Next.js frontend
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json());
 
 // Middleware to authenticate the user
